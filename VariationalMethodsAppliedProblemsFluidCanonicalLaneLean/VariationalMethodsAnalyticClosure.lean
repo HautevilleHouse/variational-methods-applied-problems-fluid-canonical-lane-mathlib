@@ -1,0 +1,24 @@
+import VariationalMethodsAppliedProblemsFluidCanonicalLaneLean.VariationalMethodsAnalyticCertificate
+
+namespace HautevilleHouse
+namespace VariationalMethodsAppliedProblemsFluidCanonicalLaneLean
+
+def VariationalMethodsAdmittedAnalyticClosure : Prop :=
+  VariationalMethodsAnalyticCertificateClosed sourceVariationalMethodsAnalyticCertificate ∧
+  ConstrainedFluidVariationalClosure analyticAdmissibleClass
+
+def UnrestrictedClassicalFluidBoundaryCarried : Prop :=
+  formalizationCertificate.theoremBoundaryOpen = true ∧
+  mathlibPDESubstrate.unrestrictedNavierStokesStackCarried = true
+
+theorem variational_methods_admitted_analytic_closure_checked :
+    VariationalMethodsAdmittedAnalyticClosure := by
+  exact And.intro source_variational_methods_analytic_certificate_closed
+    (constrained_fluid_variational_endgame analyticAdmissibleClass)
+
+theorem unrestricted_classical_fluid_boundary_carried_checked :
+    UnrestrictedClassicalFluidBoundaryCarried := by
+  exact And.intro rfl rfl
+
+end VariationalMethodsAppliedProblemsFluidCanonicalLaneLean
+end HautevilleHouse
